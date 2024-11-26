@@ -1,0 +1,120 @@
+import React, { useState } from 'react';
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <>
+      <nav className="flex justify-between items-center my-4 px-4">
+        {/* Logo */}
+        <div>
+          <img src="/Logo.png" alt="Logo" />
+        </div>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex justify-between space-x-6 font-medium items-center">
+          <li>Features</li>
+          <li>About Us</li>
+          <li>Blog</li>
+          <button className="bg-gray-100 px-4 py-2 rounded-md text-sm">Log In</button>
+        </ul>
+
+        {/* Hamburger Button */}
+        <button
+          className="md:hidden bg-gray-100 p-2 rounded-md"
+          onClick={toggleMenu}
+        >
+          {isOpen ? (
+            <img src="/close-icon.png" alt="Close Menu" />
+          ) : (
+            <img src="/hamburger-menu.png" alt="Open Menu" />
+          )}
+        </button>
+      </nav>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <ul className="flex flex-col items-start space-y-4 bg-gray-100 p-4 font-medium md:hidden">
+          <li>Features</li>
+          <li>About Us</li>
+          <li>Blog</li>
+          <button className="bg-gray-200 px-4 py-2 rounded-md text-sm">
+            Log In
+          </button>
+        </ul>
+      )}
+    </>
+  );
+};
+
+export default Navbar;
+
+
+
+
+
+
+grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6
+w-96
+
+grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6
+
+space-x-6 overflow-x-scroll
+
+
+import React from 'react'
+import { useState } from 'react'
+
+const Navbar = () => {
+    const Navbar = () => {
+        const [ isOpen, setIsOpen] = useState(false)
+
+
+        const toggleMenu = () => {
+            setIsOpen(!isOpen)
+          }
+    }
+
+  return (
+
+  <>
+   <nav className='flex justify-between items-center my-4'>
+   <div>
+    <img src='/Logo.png' />
+   </div>
+
+   <ul className='flex justify-between space-x-6 font-medium items-center'>
+   <li>Features</li>
+   <li>About Us</li>
+   <li>Blog</li>
+
+
+   <button className='bg-gray-100 px-4 py-2 rounded-md text-sm' onClick={toggleMenu}>  Log In</button>
+
+   </ul>
+
+   <button className='bg-gray-100 py-2 px-0.5 rounded-md '>
+    <img src='/hamburger-menu.png'/>
+   </button>
+   </nav>
+
+   {isOpen && (
+        <ul className="flex flex-col items-start space-y-4 bg-gray-100 p-4 font-medium md:hidden">
+          <li>Features</li>
+          <li>About Us</li>
+          <li>Blog</li>
+          <button className="bg-gray-200 px-4 py-2 rounded-md text-sm">
+            Log In
+          </button>
+        </ul>
+      )}
+  </>
+  )
+}
+
+export default Navbar
+
