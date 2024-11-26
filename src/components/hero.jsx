@@ -10,7 +10,7 @@ const Hero = () => {
         <p className='text-center md:text-left  text-xl font-normal md:w-2/3 md:pr-14'>Organise, collaborate, and track progress seamlessly with our one-stop-shop startup growth tool.</p>
         </div>
 
-        <div className='flex w-full md:w-96 space-y-3.5 md:space-x-2.5 flex-col md:flex-row'>
+        <div className='flex w-full md:w-96 space-y-3.5 md:space-y-0 md:space-x-2.5 flex-col md:flex-row'>
             <button className='bg-custom-blue py-4 px-8 rounded-2xl text-white cursor-pointer' >Get Started</button>
             <button className=' bg-gray-100 flex items-center text-center md:ml-2 py-4 px-8 rounded-2xl cursor-pointer gap-2'>
                  <img  src='/book-a-demo.png' />

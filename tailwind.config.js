@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       lineHeight: {
-        'custom-1.1': '1.1', 
+        'custom-43-2': '43.2px',  
       },
 
       margin: {
@@ -16,6 +16,13 @@ export default {
 
       colors: {
         'custom-blue': '#4891FF'
+      },
+      letterSpacing: {
+        '-3px': '-0.1875rem', 
+      },
+
+      width: {
+        '400': '400px'
       }
     },
   },
