@@ -48,12 +48,12 @@ const Testimonial = () => {
 
   return (
     <div>
-      <h1 className=' text-5xl font-medium  w-1/2 px-2 text-left mb-12 mt-20 tracking-[-1px] w-[836px]'> 
+      <h1 className=' text-4xl md:text-5xl font-medium   text-left mb-12 mt-20 w-full md:w-3/6 tracking-[-1px] '> 
       Don't just take our word for it, see the success
         stories from businesses just like yours.
       </h1>
 
-      <div className=' flex flex-wrap md:flex-nowrap gap-4'>
+      <div className=' flex flex-wrap md:flex-nowrap md:gap-4'>
             {testimonials.map((testimonial, index) => (
                 <div key={index} 
                 style={{width: testimonial.width, height: testimonial.height}}

@@ -54,7 +54,7 @@ const Faq = () => {
         </div>
 
 
-        <div className=''>
+        <div>
   {faqs.map((faq, index) => (
     <div key={index}>
       <button
@@ -62,7 +62,11 @@ const Faq = () => {
         onClick={() => toggleFAQ(index)}
       >
         <span>{faq.question}</span>
-        <img src="/faq-open.svg" alt="Toggle FAQ" />
+        {openIndex === index ? (
+  <img src="/faq-close.svg" alt="faq-open" />
+) : (
+  <img src="/faq-open.svg" alt="faq-close" />
+)}
       </button>
 
 
