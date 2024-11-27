@@ -6,7 +6,6 @@ import Testimonial from './components/testimonial'
 import Pricing from './components/pricing'
 import Faq from './components/faq'
 import Footer from './components/footer'
-import Example from './components/example'
 
 const App = () => {
 
