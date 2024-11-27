@@ -15,8 +15,12 @@ export default {
       },
 
       colors: {
-        'custom-blue': '#4891FF'
+        'custom-blue': '#4891FF',
+        'hover-blue': '#1570F9',
+        'light-blue': '#DBE7F9'
       },
+
+    
       letterSpacing: {
         '-3px': '-0.1875rem', 
       },

@@ -6,24 +6,33 @@ import Testimonial from './components/testimonial'
 import Pricing from './components/pricing'
 import Faq from './components/faq'
 import Footer from './components/footer'
+import Example from './components/example'
 
 const App = () => {
 
-  const blackBackgroundStyle = {
-    backgroundColor: 'white', 
-    color: 'black', 
-    height: '100vh'          
-  }; 
-
   return (
-    <div className='px-6 md:px-12'>
-     <Navbar />
-     <Hero  />
-       <Main />
+    <div className='w-full relative'>
+
+     <div>
+      <Navbar />
+      <Hero  />
+     </div>
+
+      <div className='bg-black text-white' >
+      <Main />
       <Testimonial />
-      <Pricing />
+      </div>
+
+    <div>
+     <Pricing />
       <Faq />
-      <Footer />
+    </div>
+
+    <div className=' bg-black text-white'>
+    <Footer />
+    </div>
+
+   
     </div>
   )
 }

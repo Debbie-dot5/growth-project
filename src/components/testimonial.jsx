@@ -47,19 +47,19 @@ const Testimonial = () => {
 
 
   return (
-    <div>
+    <div className='px-6 md:px-12 pb-16'>
       <h1 className=' text-4xl md:text-5xl font-medium   text-left mb-12 mt-20 w-full md:w-3/6 tracking-[-1px] '> 
       Don't just take our word for it, see the success
         stories from businesses just like yours.
       </h1>
 
-      <div className=' flex flex-wrap md:flex-nowrap md:gap-4'>
+      <div className=' flex flex-wrap md:flex-nowrap space-y-6 md:space-y-0 md:gap-4'>
             {testimonials.map((testimonial, index) => (
                 <div key={index} 
-                style={{width: testimonial.width, height: testimonial.height}}
+                style={{width: testimonial.width}}
                   className=' '>
-               <div  className='bg-gray-100 px-6 py-8 rounded-2xl overflow-x-hidden'>
-               <h3 className="text-lg font-semibold text-gray-800">“{testimonial.quote}”</h3>
+               <div  className='bg-gray-100 px-6 py-8 rounded-2xl md:overflow-x-hidden'>
+               <h3 className="text-base md:text-lg font-semibold text-gray-800">“{testimonial.quote}”</h3>
                 <div>
                 <p className="text-sm  pt-10 font-bold text-gray-700">{testimonial.name}</p>
                 <span className="text-xs text-gray-600">{testimonial.company}</span>

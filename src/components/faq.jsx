@@ -42,13 +42,16 @@ const Faq = () => {
         setOpenIndex(openIndex === index ? null : index);
       };
   return (
-    <div className='max-w-2xl mx-auto my-12 space-y-4 my-32'>
-        <h2 className='text-5xl text-center font-medium leading-10 my-10'>Frequently asked questions</h2>
-        <div className='flex '>
-           <div className='bg-gray-100 flex justify-center items-center mx-auto gap-6 px-2 py-2 rounded-xl'>
+    <div className='max-w-2xl mx-auto my-6 md:my-32 space-y-4'>
+       <div>
+       <h2 className='text-5xl text-center font-medium leading-10 my-10 hidden md:block'>Frequently asked questions</h2>
+        <h2 className='text-3xl text-center font-medium leading-10 mt-16 block md:hidden'>FAQ</h2>
+       </div>
+        <div className='flex'>
+           <div className='bg-gray-100 flex justify-center items-center mx-auto gap-6 px-2 py-2 rounded-xl cursor-pointer'>
            <p className='bg-custom-blue px-4 py-1.5 text-white rounded'>All</p>
-            <p>Getting started</p>
-            <p>Pricing</p>
+            <p className=' hover:bg-light-blue py-1.5 px-1.5 rounded'>Getting started</p>
+            <p  className=' hover:bg-light-blue py-1.5 px-1.5 rounded'>Pricing</p>
            </div>
 
         </div>
@@ -58,12 +61,12 @@ const Faq = () => {
   {faqs.map((faq, index) => (
     <div key={index}>
       <button
-        className="text-left px-4 py-3 font-medium text-gray-800 flex justify-between items-center focus:outline-none w-full"
+        className="text-left px-4 py-3 font-medium text-gray-800 flex justify-between  items-center focus:outline-none w-full"
         onClick={() => toggleFAQ(index)}
       >
         <span>{faq.question}</span>
         {openIndex === index ? (
-  <img src="/faq-close.svg" alt="faq-open" />
+  <img src="/faq-close.svg" alt="faq-open" className=''/>
 ) : (
   <img src="/faq-open.svg" alt="faq-close" />
 )}
