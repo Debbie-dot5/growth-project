@@ -23,8 +23,20 @@ const Hero = () => {
       </div>
 
       <div className='relative top-14 md:-top-40  w-full h-full px-6 md:px-12'>
-        <img className='hidden md:block w-full h-auto' src="/desktop-hero.svg" alt="hero images for now" />
-        <img className='block md:hidden w-full h-auto' src="/mobile-hero.svg" alt="hero images for now" />
+        <img 
+          className='hidden md:block w-full h-auto' 
+          src="/desktop-hero.svg" 
+          alt="hero images for now"
+          fetchPriority='high'
+          loading='lazy'
+         />
+        <img 
+          className='block md:hidden w-full h-auto' 
+          src="/mobile-hero.svg" 
+          alt="hero images for now" 
+          fetchPriority='high'
+          loading='lazy'
+        />
       </div>
 
      
